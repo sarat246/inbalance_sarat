@@ -9,7 +9,6 @@
  * @since Foundation, for WordPress 4.0
  */
 ?>
-
 </div>
 <!-- End Page -->
 

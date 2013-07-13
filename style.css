@@ -99,6 +99,14 @@ h1,h2,h3,h4,h5,h6,a:link {font-weight:300;}
 .site-content .gallery-columns-4 .gallery-item img {
 }
 
+.row{
+  background: #fff;
+}
+
+.row .columns{
+  padding: 0;
+}
+
 embed,
 iframe,
 object {
@@ -137,7 +145,7 @@ body{
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   float: left;
   width: 100%;
-  margin-top: 25px;
+  margin-bottom: 0;
 }
 
 
@@ -164,8 +172,8 @@ body{
 
 .menu-bar{
   display: block;
-  float: left;
   width: 100%;
+  margin: 0 auto;
 }
 
 .menu-bar > ul{
@@ -173,6 +181,12 @@ body{
   margin: 0 auto;
   height: 80px;
   width: 300px;
+}
+
+.top-bar-section ul{
+  margin: 0 auto;
+  width: 520px;
+  display: block;
 }
 
 .top-bar-section ul li>a{
@@ -187,6 +201,17 @@ body{
 
 .top-bar-section li a:not(.button), .top-bar-section li a:not(.button):hover{
   background: #fff;
+}
+
+
+/*----------------Banner----------------*/
+
+.banner{
+  display: block;
+  float: left;
+  width: 100%;
+  height: 300px;
+  background: url(images/banner_bg_03.png) top left no-repeat;
 }
 
 /* -----------------------------------------
