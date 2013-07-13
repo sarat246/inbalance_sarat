@@ -154,7 +154,7 @@ function foundation_page_menu() {
 
 	$args = array(
 	'sort_column' => 'menu_order, post_title',
-	'menu_class'  => 'large-12 columns',
+	'menu_class'  => 'menu-bar',
 	'include'     => '',
 	'exclude'     => '',
 	'echo'        => true,
