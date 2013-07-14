@@ -9,7 +9,7 @@ get_header(); ?>
     <!-- Main Content -->
     <div class="large-12 columns" role="main">
     	<div class="banner">
-    		<h1>In Balance.<span>In mind, In body, In life</span></h1>
+    		<h1>In Balance.<br><span>In mind, In body, In life</span></h1>
     		<p>In Balance Fitness is a great way to exercise and to get your life, body and mind into shape.</p>
     		<p>We provide made to measure exercise programmes to ensure the best, most enjoyable and most effective work out for you.</p>
     		<a href="" class="more-about">More About In Balance</a>

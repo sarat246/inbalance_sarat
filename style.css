@@ -113,6 +113,10 @@ object {
   max-width: 100%;
 }
 
+p{
+  line-height: 1.2em;
+}
+
 body{
   background: #d3d4d2;
 }
@@ -146,6 +150,7 @@ body{
   float: left;
   width: 100%;
   margin-bottom: 0;
+  z-index: 999;
 }
 
 
@@ -185,7 +190,7 @@ body{
 
 .top-bar-section ul{
   margin: 0 auto;
-  width: 520px;
+  width: 600px;
   display: block;
 }
 
@@ -197,10 +202,26 @@ body{
   background: none;
   line-height: 80px;
   border-left: solid 1px #f0f0f0;
+  padding: 12px 0 12px 0;
+  font-size: 0.9em;
+  font-weight: 700;
+}
+
+.top-bar-section ul li.last-child > a{
+  border-right: solid 1px #f0f0f0;
+}
+
+.top-bar-section ul li:hover>a{
+  color: #63a849;
+  background: #f0f0f0;
 }
 
 .top-bar-section li a:not(.button), .top-bar-section li a:not(.button):hover{
   background: #fff;
+}
+
+.top-bar-section li a:not(.button):hover{
+  background: #f0f0f0;
 }
 
 
@@ -210,8 +231,37 @@ body{
   display: block;
   float: left;
   width: 100%;
-  height: 300px;
+  height: 510px;
   background: url(images/banner_bg_03.png) top left no-repeat;
+  padding-left: 500px;
+  padding-right: 90px;
+  margin-top: -50px;
+}
+
+.banner h1{
+  color: #fff;
+  font-weight: 700;
+  font-size: 5em;
+  letter-spacing: -3px;
+  line-height: 0.5em;
+  margin-top: 135px;
+}
+
+.banner h1 span{
+  font-size: 0.47em;
+  letter-spacing: -2px;
+  line-height: 0;
+}
+
+.more-about{
+  float: right;
+  color: #fff;
+  font-weight: 700;
+  padding-right: 20px;
+}
+
+.banner p{
+  color: #fff;
 }
 
 /* -----------------------------------------
