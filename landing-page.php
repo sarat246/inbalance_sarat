@@ -6,12 +6,12 @@
 
 get_header(); ?>
 
-    	<div class="banner">
-    		<h1>In Balance.<br><span>In mind, In body, In life</span></h1>
-    		<p>In Balance Fitness is a great way to exercise and to get your life, body and mind into shape.</p>
-    		<p>We provide made to measure exercise programmes to ensure the best, most enjoyable and most effective work out for you.</p>
-    		<a href="" class="button_round white">More About In Balance</a>
-    	</div>
+	<div class="banner">
+		<h1>In Balance.<br><span>In mind, In body, In life</span></h1>
+		<p>In Balance Fitness is a great way to exercise and to get your life, body and mind into shape.</p>
+		<p>We provide made to measure exercise programmes to ensure the best, most enjoyable and most effective work out for you.</p>
+		<a href="" class="button_round white">More About In Balance</a>
+	</div>
 
     <!-- Main Content -->
     <div class="large-12 columns" role="main">
@@ -38,7 +38,11 @@ get_header(); ?>
     		<?php query_posts(array( 'post_type' => 'testimonials', 'posts_per_page' => -1 )); ?>
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                 
-            			<div class="client_message"><?php the_content(); ?></div>
+            			<div class="testimonial">
+                            <p class="center"><?php echo get_the_content(); ?></p>
+                            <h4 class="center"><?php the_title(); ?></h4>
+                        </div>
+
 
                    <?php endwhile; else: ?>
                    <p>Sorry, no posts matched your criteria.</p>
@@ -47,5 +51,6 @@ get_header(); ?>
             <?php wp_reset_query(); ?>
     	</article>
     </div>
+
 
 <?php get_footer(); ?>
