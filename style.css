@@ -62,7 +62,11 @@ article .th {margin-bottom:10px; margin-bottom:1em;}
 ----------------------------------------- */
 
 body,h1,h2,h3,h4,h5,h6,p {font-family: 'Open Sans', sans-serif;}
-h1,h2,h3,h4,h5,h6,a:link {font-weight:300;}
+h1,h2,h3,h4,h5,h6,a:link {font-weight:300; color: #63a849;}
+
+h1 {
+font-size: 2.4em;
+}
 
 .site-title .subheader {margin-bottom:0;}
 
@@ -104,7 +108,7 @@ h1,h2,h3,h4,h5,h6,a:link {font-weight:300;}
 }
 
 .row .columns{
-  padding: 0;
+  padding: 1em 4em;
 }
 
 embed,
@@ -117,8 +121,58 @@ p{
   line-height: 1.2em;
 }
 
+
 body{
   background: #d3d4d2;
+}
+
+.center{
+  text-align: center;
+}
+
+.left{
+  text-align: left;
+}
+
+.right{
+  text-align: right;
+}
+
+a{
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+a.button_round{
+  display: inline-block;
+  font-size: 1.4em;
+  font-weight: 700;
+  font-style: italic;
+  border:solid 2px #63a849;
+  color: #63a849;
+  padding: 0.5em 0.8em;
+  /* Border-Radius */
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  line-height: 0.8em;
+}
+
+a.button_round:hover{
+  color: #fff;
+  background:#63a849;
+}
+
+a.white{
+  border:solid 2px #fff;
+  color: #fff;
+}
+
+a.white:hover{
+  color: #63a849;
+  background:#fff;
 }
 
 /* -----------------------------------------
@@ -151,6 +205,7 @@ body{
   width: 100%;
   margin-bottom: 0;
   z-index: 999;
+  position: fixed;
 }
 
 
@@ -235,7 +290,7 @@ body{
   background: url(images/banner_bg_03.png) top left no-repeat;
   padding-left: 500px;
   padding-right: 90px;
-  margin-top: -50px;
+  margin-top: 30px;
 }
 
 .banner h1{
@@ -262,6 +317,39 @@ body{
 
 .banner p{
   color: #fff;
+}
+
+/*----------------services----------------*/
+.services_list{
+  display: block;
+  float: left;
+  width: 100%;
+  list-style: none;
+}
+
+.services_list li{
+  display: block;
+  width: 25%;
+  float: left;
+  padding:0 12px;
+}
+
+.services_list li img{
+  margin: 0;
+}
+
+.services_list li:hover a img{
+  opacity:0.8; 
+}
+
+.services_list li h5{
+  margin: 0;
+}
+
+/*----------------Testimonials----------------*/
+
+.testimonials{
+background: #f0e692;
 }
 
 /* -----------------------------------------

@@ -73,6 +73,8 @@ function foundation_assets() {
 		// Load JavaScripts
 		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/js/foundation.min.js', null, '4.0', true );
 		wp_enqueue_script( 'modernizr', get_template_directory_uri().'/js/vendor/custom.modernizr.js', null, '2.1.0');
+		wp_enqueue_script( 'bxslider', get_template_directory_uri().'/js/jquery.bxslider.min.js', null, '4.1.1' true);
+		/*wp_enqueue_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js', null, '1.8.2', true);*/
 		if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 
 		// Load Stylesheets
@@ -81,7 +83,7 @@ function foundation_assets() {
 		wp_enqueue_style( 'app', get_stylesheet_uri(), array('foundation') );
 
 		// Load Google Fonts API
-		wp_enqueue_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:800,700,400,300' );
+		wp_enqueue_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:700italic,700,400,300' );
 	
 	}
 
@@ -442,6 +444,7 @@ add_filter( 'wp_title', 'foundation_title', 10, 2 );
  * @see: http://fwp.drewsymo.com/shortcodes/
  */
 
+require( get_template_directory() . '/inc/custom-post-type.php' );
 $foundation_shortcodes = trailingslashit( get_template_directory() ) . 'inc/shortcodes.php';
 
 if (file_exists($foundation_shortcodes)) {
