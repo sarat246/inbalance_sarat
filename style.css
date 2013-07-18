@@ -16,6 +16,7 @@ Tags: two-columns
 /* -------------------------------------------------- 
    Table of Contents
 -----------------------------------------------------
+:: Layout
 :: Images
 :: Posts
 :: Typography
@@ -24,6 +25,36 @@ Tags: two-columns
 :: Page Name 1
 :: Page Name 2
 */
+
+/* -----------------------------------------
+   Layout
+----------------------------------------- */
+
+
+body{
+  background: #d3d4d2;
+}
+
+[role="main"]{
+  width: 100%;
+  margin-top: 80px;
+ }
+
+.row {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 66.5em;
+  padding:3em 4em;
+  background: #fff;
+}
+
+/* .row .columns{
+  padding: 3em 4em;
+}
+ */
 
 /* -----------------------------------------
    Images
@@ -65,7 +96,36 @@ body,h1,h2,h3,h4,h5,h6,p {font-family: 'Open Sans', sans-serif;}
 h1,h2,h3,h4,h5,h6,a:link {font-weight:300; color: #63a849;}
 
 h1 {
-font-size: 2.4em;
+font-size: 2em;
+}
+
+p{
+  font-size: 0.9em;
+  line-height: 1.2em;
+}
+
+p a{
+  color: #63a849;
+}
+
+b, strong{
+  font-weight: 700;
+}
+
+em{
+  font-style: italic;
+}
+
+.center-text{
+  text-align: center;
+}
+
+.left-text{
+  text-align: left;
+}
+
+.right-text{
+  text-align: right;
 }
 
 .site-title .subheader {margin-bottom:0;}
@@ -103,13 +163,6 @@ font-size: 2.4em;
 .site-content .gallery-columns-4 .gallery-item img {
 }
 
-.row{
-  background: #fff;
-}
-
-.row .columns{
-  padding: 1em 4em;
-}
 
 embed,
 iframe,
@@ -117,26 +170,16 @@ object {
   max-width: 100%;
 }
 
-p{
-  line-height: 1.2em;
-}
 
 
-body{
-  background: #d3d4d2;
+.left_side{
+  float: left;
 }
 
-.center{
-  text-align: center;
+.right_side{
+  float: right;
 }
 
-.left{
-  text-align: left;
-}
-
-.right{
-  text-align: right;
-}
 
 a{
   -webkit-transition: all 0.2s ease-in-out;
@@ -147,7 +190,7 @@ a{
 
 a.button_round{
   display: inline-block;
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-weight: 700;
   font-style: italic;
   border:solid 2px #63a849;
@@ -158,9 +201,26 @@ a.button_round{
   -moz-border-radius: 100px;
   border-radius: 100px;
   line-height: 0.8em;
+  margin: 1em 0;
 }
 
-a.button_round:hover{
+a.button_round_center{
+  display: table;
+  font-size: 1.2em;
+  font-weight: 700;
+  font-style: italic;
+  border:solid 2px #63a849;
+  color: #63a849;
+  padding: 0.5em 0.8em;
+  /* Border-Radius */
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  line-height: 0.8em;
+  margin: 2em auto 1em auto;
+}
+
+a.button_round_center:hover, a.button_round:hover{
   color: #fff;
   background:#63a849;
 }
@@ -174,6 +234,11 @@ a.white:hover{
   color: #63a849;
   background:#fff;
 }
+
+a:hover img{
+  opacity: 0.7;
+}
+
 
 /* -----------------------------------------
    Menu Bar
@@ -189,7 +254,7 @@ a.white:hover{
 }
 
 .top-bar .name{
-  height: 80px;
+  height: 75px;
 }
 
 .top-bar{
@@ -206,6 +271,8 @@ a.white:hover{
   margin-bottom: 0;
   z-index: 999;
   position: fixed;
+  border-top: solid 5px #444;
+  top: 0;
 }
 
 
@@ -215,7 +282,7 @@ a.white:hover{
   float: left;
   width: 200px;
   height: 50px;
-  margin-top: 15px;
+  margin-top: 12px;
 }
 
 .logo_color{
@@ -239,7 +306,7 @@ a.white:hover{
 .menu-bar > ul{
   display: block;
   margin: 0 auto;
-  height: 80px;
+  height: 75px;
   width: 300px;
 }
 
@@ -250,12 +317,11 @@ a.white:hover{
 }
 
 .top-bar-section ul li>a{
-  height: 80px;
+  height: 75px;
   color: #000;
   text-transform: uppercase;
-  border-left: #ccc;
   background: none;
-  line-height: 80px;
+  line-height: 75px;
   border-left: solid 1px #f0f0f0;
   padding: 12px 0 12px 0;
   font-size: 0.9em;
@@ -280,32 +346,48 @@ a.white:hover{
 }
 
 
+/*---------------- Twitter feed & Socail icons----------------*/
+
+.social_box{
+  background: #333;
+}
+
+/*---------------- Footer Box----------------*/
+
+.footer_box{
+  background: #222;
+}
+
+
+/* -----------------------------------------
+   Home Page
+----------------------------------------- */
+
 /*----------------Banner----------------*/
 
-.banner{
-  display: block;
-  float: left;
-  width: 100%;
-  height: 510px;
-  background: url(images/banner_bg_03.png) top left no-repeat;
-  padding-left: 500px;
-  padding-right: 90px;
-  margin-top: 30px;
+.banner_box{
+  background: #fff url(images/banner_bg_03.png) bottom right no-repeat;
+  background-size: 100%;
 }
 
-.banner h1{
+.banner_box h1{
   color: #fff;
   font-weight: 700;
-  font-size: 5em;
+  font-size: 4.8em;
   letter-spacing: -3px;
   line-height: 0.5em;
-  margin-top: 135px;
+  margin-top: 75px;
+  margin-bottom: 0.5em;
 }
 
-.banner h1 span{
+.banner_box h1 span{
   font-size: 0.47em;
   letter-spacing: -2px;
   line-height: 0;
+}
+
+.banner_box p{
+  color: #fff;
 }
 
 .more-about{
@@ -315,27 +397,17 @@ a.white:hover{
   padding-right: 20px;
 }
 
-.banner p{
-  color: #fff;
-}
-
 /*----------------services----------------*/
-.services_list{
+
+.services_list li a{
   display: block;
-  float: left;
   width: 100%;
-  list-style: none;
 }
 
-.services_list li{
-  display: block;
-  width: 25%;
-  float: left;
-  padding:0 12px;
-}
 
 .services_list li img{
-  margin: 0;
+  margin: 0 auto;
+  display: block;
 }
 
 .services_list li:hover a img{
@@ -344,6 +416,7 @@ a.white:hover{
 
 .services_list li h5{
   margin: 0;
+  text-align: center;
 }
 
 /*----------------Testimonials----------------*/
@@ -352,10 +425,212 @@ a.white:hover{
 background: #f0e692;
 }
 
-/* -----------------------------------------
-   Page Name 1
------------------------------------------ */
+.testimonial_box{
+  padding: 15px 0;
+  list-style: none;
+}
+
+.testimonial_content{
+  font-family: "Georgia", serif;
+  font-style: italic;
+  font-size: 1em;
+}
+
+h5.client_name{
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: -1px;
+}
+
+.bx-pager {
+  text-align: center;
+  text-decoration: none;
+}
+
+a.pager-link {
+  background: #fff;
+  border: 0 none;
+  display: inline-block;
+  height: 13px;
+  text-indent: -9999px;
+  width: 13px;
+  font-size: 0;
+  margin: 0 5px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  -webkit-box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+a.pager-active {
+  background: #8DC63F;
+}
+
+/*----------------About Lucy & Recent Posts----------------*/
+
+
+.about_box img{
+  float: left;
+  margin:0 15px 15px 0;
+}
+
+.recent_posts ul{
+  display: block;
+  list-style: none;
+}
+
+.recent_posts ul li{
+  border-bottom: solid 1px #f0f0f0;
+}
+
+.recent_posts ul li > a{
+  font-weight: 700;
+  color: #333;
+}
 
 /* -----------------------------------------
    Page Name 2
 ----------------------------------------- */
+
+
+/* Used to alter styles for screens at least 768px wide. This is where the grid changes. */
+@media only screen and (max-width: 940px) and (min-width: 768px) {
+
+
+/* -----------------------------------------
+   Menu Bar
+----------------------------------------- */
+
+.top-bar .title-area{
+  width: 100%;
+}
+
+.top-bar-section {
+  width: 100%;
+  background: #333;
+}
+
+.top-bar-section ul {
+  width: 100%;
+  display: block;
+}
+
+.top-bar-section li a:not(.button), .top-bar-section li a:not(.button):hover {
+  background: #333;
+}
+
+.top-bar-section ul li{
+  width: 50%;
+  float: left;
+}
+
+.top-bar-section ul li>a {
+  height: 60px;
+  color: #fff;
+  line-height: 59px;
+  border-left: none;
+  padding: 0 1em;
+  border-bottom: solid 1px #444;
+}
+
+.top-bar-section ul li:nth-child(2n+2)>a{
+  border-left: solid 1px #444;
+}
+
+.banner_box{
+  background-size: 108%;
+}
+
+.banner_box h1{
+  font-size: 3.5em;
+  margin-top: 0;
+}
+
+}
+
+
+@media only screen and (max-width: 767px) {
+
+[role="main"]{
+  width: 100%;
+  margin-top: 40px;
+ }
+
+.row {
+  padding:3em 1em;
+}
+
+.top-bar .name{
+  height: 50px;
+}
+
+.top-bar{
+  background: #fff;
+  height: 50px;
+  line-height: 50px;
+  z-index: 999;
+  position: fixed;
+  border-top: solid 3px #444;
+}
+
+
+.top-bar .name h1.logo a{
+  display: block;
+  float: left;
+  width: 130px;
+  height: 30px;
+  margin-top: 8px;
+}
+
+.top-bar .title-area{
+  width: 100%;
+}
+
+.top-bar .toggle-topbar.menu-icon {
+  margin-top: -19px;
+}
+
+.top-bar-section {
+  width: 100%;
+  background: #333;
+}
+
+.top-bar-section ul {
+  width: 100%;
+  display: block;
+}
+
+.top-bar-section li a:not(.button), .top-bar-section li a:not(.button):hover {
+  background: #333;
+}
+
+.top-bar-section ul li{
+  width: 50%;
+  float: left;
+}
+
+.top-bar-section ul li>a {
+  height: 60px;
+  color: #fff;
+  line-height: 59px;
+  border-left: none;
+  padding: 0 1em;
+  border-bottom: solid 1px #444;
+}
+
+.top-bar-section ul li:nth-child(2n+2)>a{
+  border-left: solid 1px #444;
+}
+
+.banner_box{
+  background-size: auto;
+}
+
+.banner_box h1{
+  font-size: 3em;
+  margin-top: 0;
+}
+
+}

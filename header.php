@@ -48,4 +48,4 @@
 	</nav>
 
 <!-- Begin Page -->
-<div class="row">
+<section role="main">
