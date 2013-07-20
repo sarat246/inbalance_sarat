@@ -92,6 +92,79 @@ article .th {margin-bottom:10px; margin-bottom:1em;}
    Typography
 ----------------------------------------- */
 
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?58126424');
+  src: url('../font/fontello.eot?58126424#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff?58126424') format('woff'),
+       url('../font/fontello.ttf?58126424') format('truetype'),
+       url('../font/fontello.svg?58126424#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-mail:before { content: '\e81c'; } /* '' */
+.icon-cancel-circle:before { content: '\e818'; } /* '' */
+.icon-quote-left:before { content: '\e80a'; } /* '' */
+.icon-quote-right:before { content: '\e809'; } /* '' */
+.icon-quote:before { content: '\e815'; } /* '' */
+.icon-plus-circle:before { content: '\e819'; } /* '' */
+.icon-search:before { content: '\e80f'; } /* '' */
+.icon-phone-circled:before { content: '\e814'; } /* '' */
+.icon-phone:before { content: '\e812'; } /* '' */
+.icon-location-1:before { content: '\e811'; } /* '' */
+.icon-down-open:before { content: '\e816'; } /* '' */
+.icon-menu:before { content: '\e81d'; } /* '' */
+.icon-down-circle:before { content: '\e817'; } /* '' */
+.icon-left-open:before { content: '\e805'; } /* '' */
+.icon-right-open:before { content: '\e806'; } /* '' */
+.icon-left-open-big:before { content: '\e81a'; } /* '' */
+.icon-right-open-big:before { content: '\e81b'; } /* '' */
+.icon-post:before { content: '\e80e'; } /* '' */
+.icon-right-open-1:before { content: '\e80c'; } /* '' */
+.icon-left-open-1:before { content: '\e80b'; } /* '' */
+.icon-location:before { content: '\e810'; } /* '' */
+.icon-link:before { content: '\e80d'; } /* '' */
+.icon-twitter:before { content: '\e800'; } /* '' */
+.icon-facebook:before { content: '\e801'; } /* '' */
+.icon-linkedin:before { content: '\e802'; } /* '' */
+.icon-angle-circled-left:before { content: '\e808'; } /* '' */
+.icon-angle-circled-right:before { content: '\e807'; } /* '' */
+.icon-youtube:before { content: '\e803'; } /* '' */
+.icon-vimeo:before { content: '\e804'; } /* '' */
+.icon-phone-1:before { content: '\e813'; } /* '' */
+
 body,h1,h2,h3,h4,h5,h6,p {font-family: 'Open Sans', sans-serif;}
 h1,h2,h3,h4,h5,h6,a:link {font-weight:300; color: #63a849;}
 
@@ -170,8 +243,6 @@ object {
   max-width: 100%;
 }
 
-
-
 .left_side{
   float: left;
 }
@@ -237,6 +308,20 @@ a.white:hover{
 
 a:hover img{
   opacity: 0.7;
+}
+
+
+/* -----------------------------------------
+   Innner pages shared Styles
+----------------------------------------- */
+
+.title_box{
+  padding: 1em 4em;
+}
+
+.title_box h2{
+  color: #fff;
+  font-weight: 700;
 }
 
 
@@ -562,6 +647,14 @@ a.pager-active {
   padding:3em 1em;
 }
 
+a.button_round{
+  font-size: 1em;
+}
+
+a.button_round_center{
+  font-size: 0.9em;
+}
+
 .top-bar .name{
   height: 50px;
 }
@@ -631,6 +724,31 @@ a.pager-active {
 .banner_box h1{
   font-size: 3em;
   margin-top: 0;
+}
+
+.about_box a{
+  display: block;
+  float: left;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.about_box p a{
+  font-weight: 700;
+  font-style: italic;
+  margin-top: 15px;
+}
+
+.about_box a img{
+  display: block;
+  margin:0 auto;
+  max-width: 100%;
+}
+
+.recent_posts{
+  border-top: solid 2px #f0f0f0;
+  margin: 15px 0;
+  padding-top: 20px;
 }
 
 }
